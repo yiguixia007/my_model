@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      database: inhouse_report
+      host: 192.168.102.234
+      port: 27017
