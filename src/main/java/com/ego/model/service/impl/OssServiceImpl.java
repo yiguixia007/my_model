@@ -14,6 +14,8 @@ import java.io.*;
 
 /**
  * OSS文件上传
+ * @author ego
+ * @since 2018-10-27 16:07
  */
 @Service
 public class OssServiceImpl implements OssService {

@@ -2,14 +2,14 @@ package com.ego.model.common.mo;
 
 
 
-import com.ego.model.common.constant.CommonConstants;
+import com.ego.model.common.constant.CommonConstant;
 
 import java.io.Serializable;
 
 public class ResponseMO<T> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private int code = CommonConstants.RESPONSE_CODE_SUCCESS;  //成功 为0   失败 为 1
+	private int code = CommonConstant.RESPONSE_CODE_SUCCESS;  //成功 为0   失败 为 1
 	private String msg = "";
 	private T data;
 	private String debugInfo;
@@ -19,7 +19,7 @@ public class ResponseMO<T> implements Serializable {
 	
 	public boolean checkFailure() {
 		boolean result = false;
-		if (this.code == CommonConstants.RESPONSE_CODE_FAILURE) {
+		if (this.code == CommonConstant.RESPONSE_CODE_FAILURE) {
 			result = true;
 		}
 		return result;
@@ -42,7 +42,7 @@ public class ResponseMO<T> implements Serializable {
 	}
 
 	public void setResponseCodeFailure() {
-		this.code = CommonConstants.RESPONSE_CODE_FAILURE;
+		this.code = CommonConstant.RESPONSE_CODE_FAILURE;
 	}
 
 	public String getDebugInfo() {

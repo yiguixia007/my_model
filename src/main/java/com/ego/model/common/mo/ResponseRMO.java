@@ -1,7 +1,7 @@
 package com.ego.model.common.mo;
 
 
-import com.ego.model.common.constant.CommonConstants;
+import com.ego.model.common.constant.CommonConstant;
 
 import java.io.Serializable;
 
@@ -20,7 +20,7 @@ public class ResponseRMO implements Serializable{
     }
 
     public boolean success() {
-        return CommonConstants.RESPONSE_CODE_SUCCESS == code;
+        return CommonConstant.RESPONSE_CODE_SUCCESS == code;
     }
 
     public ResponseRMO(int code, String msg){

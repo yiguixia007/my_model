@@ -7,6 +7,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+/**
+ * OSS文件上传
+ * @author ego
+ * @since 2018-10-27 16:07
+ */
 public interface OssService {
 
     /**

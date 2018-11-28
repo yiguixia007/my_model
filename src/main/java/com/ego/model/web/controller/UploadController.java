@@ -18,20 +18,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author wg
- * @since  2018-06-12 下午1:40
+ * @author ego
+ * @since 2018-10-27 16:07
  */
 @Api(tags = "文件上传")
 @Slf4j
 @RestController
 @RequestMapping("/upload")
 public class UploadController {
-
-    @Autowired
-    private OSSClientUtil ossClient;
-
-    @Autowired
-    private OssService ossService;
 
     @ApiOperation("上传文件")
     @PostMapping("/uploadFile")
@@ -44,7 +38,6 @@ public class UploadController {
         String imageKey;
         try {
             imageKey = ossClient.uploadImage2Oss(file);
-
         } catch (Exception e) {
             log.info("文件上传失败:");
             e.getStackTrace();
@@ -52,6 +45,12 @@ public class UploadController {
         }
         return ResponseUtil.successWithData(imageKey);
     }
+
+    @Autowired
+    private OSSClientUtil ossClient;
+
+    @Autowired
+    private OssService ossService;
 
     @ApiOperation("上传图片")
     @PostMapping("/uploadImage")
