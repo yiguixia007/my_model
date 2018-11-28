@@ -4,3 +4,11 @@ spring:
       database: inhouse_report
       host: 192.168.102.234
       port: 27017
+
+common:
+  oss:
+    endpoint: XXX
+    accessKeyId: XXX
+    accessKeySecret: XXX
+    host: XXX  # oss域名
+    bucketName: xxx
